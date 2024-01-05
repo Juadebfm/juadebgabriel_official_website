@@ -4,7 +4,7 @@ import { CgMenuHotdog } from "react-icons/cg";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between pt-10 px-10">
+    <nav className="flex items-center justify-between pt-10 px-10 fixed w-full">
       <div className="flex items-center justify-between space-x-2">
         <Image
           src="/assets/images/logo.png"

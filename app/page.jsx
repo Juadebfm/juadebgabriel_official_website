@@ -1,29 +1,39 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { MdDesignServices } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
-import { useState } from "react";
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [visitedServiceSection, setVisitedServiceSection] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const serviceSection = document.getElementById("services");
+      if (
+        serviceSection &&
+        window.scrollY >= serviceSection.offsetTop &&
+        !visitedServiceSection
+      ) {
+        // User has reached the service section for the first time
+        setVisitedServiceSection(true);
+      }
+    };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [visitedServiceSection]);
 
   return (
     <>
       {/* HERO */}
-      <section className="flex min-h-screen flex-col items-center justify-between py-24 px-10 text-sm">
-        <div className="flex items-center justify-between flex-col">
+      <section
+        className="flex min-h-screen flex-col items-center justify-between py-24 px-10 text-sm relative"
+        style={{ backgroundImage: "url(/assets/svg/grid.svg)" }}
+      >
+        <div className="flex items-center justify-between flex-col mt-20">
           <span className="uppercase tracking-wider text-lg">
             Software Developer | UI/UX Designer
           </span>
@@ -31,7 +41,7 @@ export default function Home() {
             Juadeb <br /> Gabriel
           </h1>
         </div>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full absolute bottom-4 px-10">
           <div className="w-1/3">
             <Link
               href="mailto:contact@juadebgabriel.com"
@@ -103,57 +113,79 @@ export default function Home() {
         className="min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-10"
       >
         <span className="uppercase tracking-wider text-lg">Services</span>
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="w-full cursor-pointer"
-        >
-          <h2
-            className={`uppercase text-3xl font-bold mb-3 ${
-              isHovered ? "text-white" : "text-slate-400/50"
-            }`}
-          >
-            Web Development
-          </h2>
-          <hr className={isHovered ? "hidden" : "block"} />
-          <p
-            className={`flex-col items-start justify-center pb-5 border-b border-slate-400 ${
-              isHovered ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-1000 ease-in-out`}
-            style={{ display: isHovered ? "flex" : "none" }}
-          >
-            <span className="capitalize italic">
-              Clean Functional Interfaces And Websites
-            </span>
-            <span className="text-sm">
-              Obsessing over every single detail helps me to build
-              well-thought-out interfaces that work flawlessly on any screen
-            </span>
-          </p>
+        <div className="w-full space-y-20">
+          <div className="w-full cursor-pointer">
+            <h2
+              className={`uppercase text-3xl font-bold mb-3 ${
+                visitedServiceSection ? "text-white" : "text-slate-400/50"
+              }`}
+            >
+              Web Development
+            </h2>
+            <p
+              className={`flex flex-col items-start justify-center pb-5 border-b border-slate-400 ${
+                visitedServiceSection ? "block" : "hidden"
+              }`}
+            >
+              <span className="capitalize italic text-xl">
+                Clean Functional Interfaces And Websites
+              </span>
+              <span className="text-sm">
+                Obsessing over every single detail helps me to build
+                well-thought-out interfaces that work flawlessly on any screen
+              </span>
+            </p>
+          </div>
         </div>
-        <div className="w-full cursor-pointer">
-          <h2 className="uppercase text-3xl font-bold mb-3 text-slate-400/50">
-            UI/UX Design
-          </h2>
-          <hr />
-          <p className="flex-col items-start justify-center pb-5 border-b border-slate-400 hidden">
-            <span className="capitalize">User experiences that converts</span>
-            UX and conversion thinking are at the core of everything i do. I
-            strive to design products that people want to use.
-          </p>
+        <div className="w-full space-y-20">
+          <div className="w-full cursor-pointer">
+            <h2
+              className={`uppercase text-3xl font-bold mb-3 ${
+                visitedServiceSection ? "text-white" : "text-slate-400/50"
+              }`}
+            >
+              UI/UX Design
+            </h2>
+            <p
+              className={`flex flex-col items-start justify-center pb-5 border-b border-slate-400 ${
+                visitedServiceSection ? "block" : "hidden"
+              }`}
+            >
+              <span className="capitalize italic text-xl">
+                User Experience that converts
+              </span>
+              <span className="text-sm">
+                UX and conversion thinking are at the core of everything i do. I
+                strive to design products that people want to use and people
+                find easy to use.
+              </span>
+            </p>
+          </div>
         </div>
-        <div className="w-full cursor-pointer">
-          <h2 className="uppercase text-3xl font-bold mb-3 text-slate-400/50">
-            Brand Design
-          </h2>
-          <hr />
-          <p className="flex-col items-start justify-center pb-5 border-b border-slate-400 hidden">
-            <span className="capitalize">
-              Kick-ass visual branding and style
-            </span>
-            Obsessing over every single detail helps me to build
-            well-thought-out interfaces that work flawlessly on any screen
-          </p>
+        <div className="w-full space-y-20">
+          <div className="w-full cursor-pointer">
+            <h2
+              className={`uppercase text-3xl font-bold mb-3 ${
+                visitedServiceSection ? "text-white" : "text-slate-400/50"
+              }`}
+            >
+              Brand Design & Advertisement
+            </h2>
+            <p
+              className={`flex flex-col items-start justify-center pb-5 border-b border-slate-400 ${
+                visitedServiceSection ? "block" : "hidden"
+              }`}
+            >
+              <span className="capitalize italic text-xl">
+                <i>Kick-ass</i> visual branding and style
+              </span>
+              <span className="text-sm">
+                Creating consistent visual style for your brand is key. I have a
+                lot of experienced team and collaborators who are actively
+                helping business get the visibility they need.
+              </span>
+            </p>
+          </div>
         </div>
       </section>
     </>
