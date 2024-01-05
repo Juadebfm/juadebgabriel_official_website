@@ -6,9 +6,17 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-export default function Home() {
-  const [visitedServiceSection, setVisitedServiceSection] = useState(false);
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+export default function Home() {
+  // Animation initializer
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
+
+  // Handles the scroll effects on services section
+  const [visitedServiceSection, setVisitedServiceSection] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const serviceSection = document.getElementById("services");
@@ -30,28 +38,31 @@ export default function Home() {
     <>
       {/* HERO */}
       <section
-        className="flex min-h-screen flex-col items-center justify-between py-24 px-10 text-sm relative"
+        className="flex h-[65vh] lg:min-h-screen flex-col items-center justify-between py-24 px-10 md:px-[20px] lg:px-10 text-sm relative"
         style={{ backgroundImage: "url(/assets/svg/grid.svg)" }}
       >
-        <div className="flex items-center justify-between flex-col mt-20">
-          <span className="uppercase tracking-wider text-lg">
+        <div className="flex items-center justify-between flex-col mt-24">
+          <span className="uppercase tracking-wider text-base md:text-lg">
             Software Developer | UI/UX Designer
           </span>
-          <h1 className="text-9xl uppercase leading-none">
+          <h1 className="text-8xl md:text-9xl uppercase leading-none text_shadow">
             Juadeb <br /> Gabriel
           </h1>
         </div>
-        <div className="flex items-center justify-between w-full absolute bottom-4 px-10">
-          <div className="w-1/3">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between gap-7 md:gap-0 w-max md:w-full absolute bottom-6 px-10">
+          <div className="w-full md:w-1/3">
             <Link
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
               href="mailto:contact@juadebgabriel.com"
-              className="cursor-pointer hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear"
+              className="cursor-pointer hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear w-max md:w-auto text-center md:text-start"
             >
               contact@juadebgabriel.com
             </Link>
           </div>
 
-          <ul className="flex items-center justify-center space-x-5 w-1/3">
+          <ul className="flex items-center justify-center space-x-5 w-full md:w-1/3">
             <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
               <Link href="#about">About</Link>
             </li>
@@ -66,7 +77,11 @@ export default function Home() {
             </li>
           </ul>
 
-          <div className="flex items-center justify-end w-1/3 space-x-4">
+          <div
+            data-aos="fade-left"
+            data-aos-offset="100"
+            className="flex items-center justify-center md:justify-end w-full md:w-1/3 space-x-4"
+          >
             <Link target="_blank" href="https://github.com/Juadebfm">
               <FaGithub className="text-white hover:text-slate-400/50 transition-colors duration-200 ease-linear text-xl" />
             </Link>
@@ -81,7 +96,7 @@ export default function Home() {
       </section>
       {/* About */}
       <section
-        className="min-h-screen w-full flex flex-col items-start justify-center space-y-14"
+        className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14"
         id="about"
       >
         <span className="uppercase tracking-wider px-10 text-lg">Who am i</span>
@@ -110,7 +125,7 @@ export default function Home() {
       {/* SERVICES */}
       <section
         id="services"
-        className="min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-10"
+        className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-10 mt-24"
       >
         <span className="uppercase tracking-wider text-lg">Services</span>
         <div className="w-full space-y-20">
