@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between py-10 px-[20px] md:px-10 fixed left-0 top-0 z-20 w-screen md:w-full ${
+      className={`flex items-center justify-between py-10 2xl:py-32 px-[20px] md:px-10 fixed left-0 top-0 z-20 w-screen md:w-full 2xl:px-36 ${
         isScrolled ? "bg-black/95" : "bg-transparent"
       }`}
     >
@@ -36,10 +36,10 @@ const Navbar = () => {
           height={40}
           alt="Logo"
         />
-        <span className="">Juadeb Gabriel</span>
+        <span className="2xl:text-3xl">Juadeb Gabriel</span>
       </div>
       <div className="nav_toggle">
-        <CgMenuHotdog className="w-[40px] h-[40px] text-2xl text-white cursor-pointer" />
+        <CgMenuHotdog className="w-[40px] h-[40px] text-2xl 2xl:text-4xl text-white cursor-pointer" />
       </div>
     </nav>
   );

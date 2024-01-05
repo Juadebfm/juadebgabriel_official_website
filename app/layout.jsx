@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body
-        className={`${poppins.className} bg-primary text-white scrollbar-thin scrollbar-thumb-primary_faded scrollbar-track-gray-300`}
+        className={`${poppins.className} bg-primary overflow-x-hidden text-white scrollbar-thin scrollbar-thumb-primary_faded scrollbar-track-gray-300 2xl:px-36`}
       >
         <Navbar />
         {children}
