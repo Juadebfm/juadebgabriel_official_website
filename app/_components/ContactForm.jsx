@@ -66,7 +66,7 @@ function ContactForm() {
               id="name"
               type="text"
               name="name"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/20 border-white"
+              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
@@ -78,7 +78,7 @@ function ContactForm() {
               id="phone"
               type="tel"
               name="phone"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/20 border-white"
+              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
             />
             <ValidationError
               prefix="Phone"
@@ -94,7 +94,7 @@ function ContactForm() {
               id="email"
               type="email"
               name="email"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/20 border-white"
+              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
             />
             <ValidationError
               prefix="Email"
@@ -109,7 +109,7 @@ function ContactForm() {
             <textarea
               id="message"
               name="message"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/20 border-white"
+              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
               rows={5}
             />
             <ValidationError
@@ -121,7 +121,7 @@ function ContactForm() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/50 transition-colors duration-200 ease-in-out w-[40%] mt-5"
+            className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-[40%] mt-5"
           >
             Submit
           </button>

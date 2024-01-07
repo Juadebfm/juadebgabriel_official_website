@@ -221,7 +221,7 @@ const Home = () => {
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl px-10">
           Projects
         </span>
-        <div className="bg-slate-400/30 mt-10">
+        <div className="bg-slate-400/10 mt-10">
           <div className="flex items-center justify-between gap-10 p-10">
             <div className="w-1/2 relative">
               <img
@@ -247,12 +247,12 @@ const Home = () => {
                 consectetur adipisicing elit. Aperiam, itaque.
               </p>
               <div className="flex items-center justify-start gap-4">
-                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/50 transition-colors duration-200 ease-in-out w-full mt-5">
+                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
                   <Link href="https://bmt-chi.vercel.app/" target="_blank">
                     View Live Demo
                   </Link>
                 </button>
-                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/50 transition-colors duration-200 ease-in-out w-full mt-5">
+                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
                   <Link href="https://github.com/Juadebfm/bmt" target="_blank">
                     View Project Details
                   </Link>
@@ -285,12 +285,12 @@ const Home = () => {
                 consectetur adipisicing elit. Aperiam, itaque.
               </p>
               <div className="flex items-center justify-start gap-4">
-                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/50 transition-colors duration-200 ease-in-out w-full mt-5">
+                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
                   <Link href="https://bmt-chi.vercel.app/" target="_blank">
                     View Live Demo
                   </Link>
                 </button>
-                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/50 transition-colors duration-200 ease-in-out w-full mt-5">
+                <button className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
                   <Link href="https://github.com/Juadebfm/bmt" target="_blank">
                     View Project Details
                   </Link>
