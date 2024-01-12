@@ -133,7 +133,7 @@ function ContactForm() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="px-5 py-3 border-[1px] bg-transparent border-slate-400/40 hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-[40%] mt-5"
+            className="px-5 py-3 border-[1px] bg-transparent border-slate-400/40 hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full lg:w-[40%] mt-5"
           >
             Submit
           </button>

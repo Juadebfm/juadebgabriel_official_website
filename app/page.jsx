@@ -108,7 +108,9 @@ const Home = () => {
         id="about"
       >
         <div>
-          <MyAnimation />
+          <div className="hidden lg:block">
+            <MyAnimation />
+          </div>
           <span className="uppercase tracking-wider px-10 text-lg 4xl:text-4xl">
             Who am i
           </span>
@@ -161,7 +163,7 @@ const Home = () => {
               <span className="capitalize italic text-lg md:text-xl 4xl:text-3xl 4xl:mb-5 text-slate-400">
                 Clean Functional Interfaces And Websites
               </span>
-              <span className="text-base w-[60%]">
+              <span className="text-base w-full md:w-[60%]">
                 Obsessing over every single detail helps me to build
                 well-thought-out interfaces that work flawlessly on any screen
               </span>
@@ -186,7 +188,7 @@ const Home = () => {
               <span className="capitalize italic text-lg md:text-xl 4xl:text-3xl 4xl:mb-5 text-slate-400">
                 User Experience that converts
               </span>
-              <span className="text-base w-[60%]">
+              <span className="text-base w-full md:w-[60%]">
                 UX and conversion thinking are at the core of everything i do. I
                 strive to design products that people want to use and people
                 find easy to use.
@@ -212,7 +214,7 @@ const Home = () => {
               <span className="capitalize italic text-lg md:text-xl 4xl:text-3xl 4xl:mb-5 text-slate-400">
                 <i>Kick-ass</i> visual branding and style
               </span>
-              <span className="text-base w-[60%]">
+              <span className="text-base w-full md:w-[60%]">
                 Creating consistent visual style for your brand is key. I have a
                 lot of experienced team and collaborators who are actively
                 helping business get the visibility they need.
@@ -318,12 +320,13 @@ const Home = () => {
             style={{
               backgroundImage: "url(/assets/images/gateway.jpg)",
               backgroundPosition: "center",
-              backgroundSize: "contain",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="flex flex-col items-center justify-center w-[60%] z-10">
+            <div className="flex flex-col items-center justify-center w-full md:w-[60%] px-[25px] md:px-0 z-10">
               <FaQuoteLeft className="text-3xl text-white self-start" />
-              <span className="text-center text-2xl px-6">
+              <span className="text-center text-xl md:text-2xl px-6">
                 Empathy helps in many ways when building a great product and
                 designing experiences. The aim of building empathy isn&apos;t
                 just to create beautiful designs or satisfy the basic needs of
@@ -337,8 +340,8 @@ const Home = () => {
               <FaQuoteRight className="text-3xl text-white self-end" />
             </div>
           </div>
-          <div className="flex items-center justify-between w-full mt-20 z-10 px-10">
-            <div className="hidden md:flex md:flex-col md:items-start md:justify-center w-1/2">
+          <div className="flex flex-col lg:flex-row items-center justify-between w-full mt-20 z-10 px-[25px] md:px-10">
+            <div className="md:flex md:flex-col md:items-start md:justify-center w-full lg:w-1/2">
               <div className="space-y-5">
                 <div className="w-full">
                   <h2 className="text-5xl font-bold">Contact</h2>
@@ -353,7 +356,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="w-full mt-7">
-                <div className="md:w-1/3 space-x-4 mt-2 flex items-start justify-start">
+                <div className="w-full lg:w-1/3 space-x-2 md:space-x-4 mt-2 flex items-start justify-start">
                   <Link
                     target="_blank"
                     href="https://github.com/Juadebfm"
@@ -387,7 +390,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <div className="" id="contact">
                 <ContactForm />
               </div>
