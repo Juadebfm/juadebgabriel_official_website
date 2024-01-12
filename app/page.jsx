@@ -223,7 +223,7 @@ const Home = () => {
       </section>
       {/* PROJECTS */}
       <section
-        className="h-max w-full flex flex-col items-start px-10 justify-center"
+        className="h-screen w-full flex flex-col items-start px-10 justify-center"
         id="projects"
       >
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
