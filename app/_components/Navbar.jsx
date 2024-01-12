@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { CgMenuHotdog } from "react-icons/cg";
+import { TbCodeDots } from "react-icons/tb";
+import { GiClockwork } from "react-icons/gi";
 
 const Navbar = () => {
   //Listening and functionality for scroll
@@ -29,13 +31,9 @@ const Navbar = () => {
         isScrolled ? "bg-black/95" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between space-x-2">
-        <Image
-          src="/assets/images/logo.png"
-          width={40}
-          height={40}
-          alt="Logo"
-        />
+      <div className="flex items-center justify-between space-x-2 cursor-pointer">
+        <GiClockwork className="text-4xl" />
+
         <span className="4xl:text-3xl">Juadeb Gabriel</span>
       </div>
       <div className="nav_toggle">

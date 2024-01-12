@@ -61,24 +61,28 @@ function ContactForm() {
           )}
 
           <div className="w-full mb-3">
-            <label htmlFor="name">What&apos;s the name please?</label>
+            <label htmlFor="name">Name</label>
             <input
               id="name"
               type="text"
               name="name"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
+              className="w-full mt-2 px-5 py-3 border-[1px] border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10"
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="w-full mb-3">
             <label htmlFor="phone">
-              Can you share a number to call you on?
+              Can you share a{" "}
+              <b>
+                <i className="capitalize">phone number</i>
+              </b>{" "}
+              to call you on?
             </label>
             <input
               id="phone"
               type="tel"
               name="phone"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
+              className="w-full mt-2 px-5 py-3 border-[1px] border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10"
             />
             <ValidationError
               prefix="Phone"
@@ -88,13 +92,17 @@ function ContactForm() {
           </div>
           <div className="w-full mb-3">
             <label htmlFor="email">
-              Great! I&apos;ll need an email to reach you on too?
+              Great! I&apos;ll need an{" "}
+              <b>
+                <i className="capitalize">email</i>
+              </b>{" "}
+              to reach you on too?
             </label>
             <input
               id="email"
               type="email"
               name="email"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
+              className="w-full mt-2 px-5 py-3 border-[1px] border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10"
             />
             <ValidationError
               prefix="Email"
@@ -104,12 +112,16 @@ function ContactForm() {
           </div>
           <div className="w-full">
             <label htmlFor="message">
-              Awesome. Now, you can share a bit of context?
+              Awesome. Now, you can share a bit of{" "}
+              <b>
+                <i className="capitalize">context</i>
+              </b>{" "}
+              on what you want to achieve?
             </label>
             <textarea
               id="message"
               name="message"
-              className="w-full mt-2 px-5 py-3 border border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10 border-white"
+              className="w-full mt-2 px-5 py-3 border-[1px] border-slate-400/40 bg-transparent focus:outline-none focus:bg-slate-400/10"
               rows={5}
             />
             <ValidationError
@@ -121,7 +133,7 @@ function ContactForm() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="px-5 py-3 border-2 border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-[40%] mt-5"
+            className="px-5 py-3 border-[1px] bg-transparent border-slate-400/40 hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-[40%] mt-5"
           >
             Submit
           </button>
