@@ -19,11 +19,11 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Snippets](#snippets)
+<!--5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+7. 🚀 [More](#more) -->
 
-## 🚨 Tutorial
+## 🚨 Info
 
 This repository contains the code corresponding to the build, using minimal stacks, nothing too crazy. NextJS 14 and TailwindCSS which happens to be my most favorite designing stack
 
