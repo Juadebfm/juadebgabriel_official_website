@@ -225,90 +225,142 @@ const Home = () => {
       </section>
       {/* PROJECTS */}
       <section
-        className="h-screen w-full flex flex-col items-start px-10 justify-center"
+        className="min-h-screen w-full flex flex-col items-start px-[25px] md:px-10 justify-center mt-24"
         id="projects"
       >
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
           Projects
         </span>
-        <span>Coming soon...</span>
+        <div className="bg-slate-400/10 mt-10 space-y-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[25px] md:p-10 border-b-[1px] border-slate-400/10">
+            <div className="w-full lg:w-1/2 relative">
+              <img
+                src="/assets/images/project1.jpg"
+                alt="BMT project"
+                className="w-full h-auto"
+              />
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-300 ease-in-out hover:opacity-0"></div>
+            </div>
+            <div className="space-y-4 w-full lg:w-1/2">
+              <h3 className="text-xl font-bold">BMT/SCFN Project</h3>
+              <p>
+                Collaborating with my team, we crafted a transformative web
+                solution for the Bone Marrow Transplant (BMT) organization X and
+                the Lagos State University of Technology (LUTH). Our unified
+                effort resulted in a comprehensive web application featuring a
+                user-centric website, a dynamic CMS, and an efficient admin
+                dashboard. Beyond functionality, our aim is to engage users in
+                the profound message of the BMT initiative. Integrated with
+                Flutterwave&apos;s payment gateway, the platform facilitates
+                seamless donations, turning each click into a meaningful
+                contribution and helping the initiative foster a community where
+                technology meets compassion, and every interaction becomes a
+                beacon of hope. The project is at it&apos;s final phase of
+                completion and should be ready for official deployment latest
+                mid-february.
+              </p>
+              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-4">
+                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
+                  <Link href="https://bmt-chi.vercel.app/" target="_blank">
+                    View Demo Site
+                  </Link>
+                </button>
+                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
+                  <Link href="https://github.com/Juadebfm/bmt" target="_blank">
+                    View Project Details
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 p-10 border-b-[1px] border-slate-400/10">
+            <div className="w-full lg:w-1/2 relative">
+              <img
+                src="/assets/images/dcossnew.JPG"
+                alt="DCOSS Associates"
+                className="w-full h-auto"
+              />
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-300 ease-in-out hover:opacity-0"></div>
+            </div>
+            <div className="space-y-4 w-full lg:w-1/2">
+              <h3 className="text-xl font-bold">DCOSS Associates LTD</h3>
+              <p>
+                This is a notable project at the heart of the company&apos;s
+                journey in optimizing their reach and online assets. The journey
+                involved a captivating conversation with the visionary CEO, Mr.
+                Daniel Bello. Despite their generous offer of a 10x payment for
+                the entire UI/UX design and development, my decision to be part
+                of their culture was fueled by the compelling narrative. The
+                result? A high-converting website that not only fortified their
+                brand but also significantly expanded their reach. This is more
+                than just a project; it&apos;s a testament to my commitment to
+                delivering impactful solutions.
+              </p>
+              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-4">
+                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
+                  <Link href="https://dcossassociates.com/" target="_blank">
+                    View Live Site
+                  </Link>
+                </button>
+                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
+                  <Link
+                    href="https://github.com/Juadebfm/dcoss_fixed"
+                    target="_blank"
+                  >
+                    View Codebase
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-10">
+            <div className="w-full lg:w-1/2 relative h-full">
+              <img
+                src="/assets/images/textsumz.JPG"
+                alt="DCOSS Associates"
+                className="w-full h-full"
+              />
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-300 ease-in-out hover:opacity-0"></div>
+            </div>
+            <div className="space-y-4 w-full lg:w-1/2">
+              <h3 className="text-xl font-bold">
+                Juad Text Sumz (SAAS IDEATION)
+              </h3>
+              <p>
+                The name of this project is quite <i>corny</i> for now but
+                it&apos;s part of a much larger ideation – a product/project
+                that leverages ChatGPT-4 AI for text summarization. This tool
+                simplifies the process of condensing articles, blogs, or news
+                pages by inputting a website link. Currently available for free,
+                it acts as a preview of an upcoming Ed-Tech project set to
+                launch before June 2024. The ChatGPT-4 integration helps distill
+                complex information, offering clarity in a world of data
+                overload. Stay tuned for the official Ed-Tech project launch,
+                where this tool plays a pivotal role in enhancing learning
+                experiences.
+              </p>
 
-        {/* <div className="bg-slate-400/10 mt-10">
-          <div className="flex items-center justify-between gap-10 p-10">
-            <div className="w-1/2 relative">
-              <img
-                src="/assets/images/project1.jpg"
-                alt="BMT project"
-                className="w-full h-auto"
-              />
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-300 ease-in-out hover:opacity-0"></div>
-            </div>
-            <div className="space-y-4 w-1/2">
-              <h3 className="text-xl font-bold">BMT/SCFN Project</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-                hic unde quos iste culpa consequatur est in ullam et consectetur
-                ex, sit, adipisci voluptate velit. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Aperiam, itaque.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-                hic unde quos iste culpa consequatur est in ullam et consectetur
-                ex, sit, adipisci voluptate velit. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Aperiam, itaque.
-              </p>
-              <div className="flex items-center justify-start gap-4">
+              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-4">
                 <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
-                  <Link href="https://bmt-chi.vercel.app/" target="_blank">
-                    View Live Demo
+                  <Link
+                    href="https://juadebtxtsum.netlify.app/"
+                    target="_blank"
+                  >
+                    View Demo Site
                   </Link>
                 </button>
                 <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
-                  <Link href="https://github.com/Juadebfm/bmt" target="_blank">
-                    View Project Details
+                  <Link
+                    href="https://github.com/Juadebfm/juadeb-text-summarizer"
+                    target="_blank"
+                  >
+                    View Codebase
                   </Link>
                 </button>
               </div>
             </div>
           </div>
-          <div className="flex flex-row-reverse items-center justify-between gap-10 p-10">
-            <div className="w-1/2 relative">
-              <img
-                src="/assets/images/project1.jpg"
-                alt="BMT project"
-                className="w-full h-auto"
-              />
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-300 ease-in-out hover:opacity-0"></div>
-            </div>
-            <div className="space-y-4 w-1/2">
-              <h3 className="text-xl font-bold">BMT/SCFN Project</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-                hic unde quos iste culpa consequatur est in ullam et consectetur
-                ex, sit, adipisci voluptate velit. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Aperiam, itaque.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-                hic unde quos iste culpa consequatur est in ullam et consectetur
-                ex, sit, adipisci voluptate velit. Lorem, ipsum dolor sit amet
-                consectetur adipisicing elit. Aperiam, itaque.
-              </p>
-              <div className="flex items-center justify-start gap-4">
-                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
-                  <Link href="https://bmt-chi.vercel.app/" target="_blank">
-                    View Live Demo
-                  </Link>
-                </button>
-                <button className="px-5 py-3 border-[1px] border-slate-400/40 bg-transparent hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full mt-5">
-                  <Link href="https://github.com/Juadebfm/bmt" target="_blank">
-                    View Project Details
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        </div>
       </section>
       {/* CONTACT */}
       <section className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-center justify-center relative">
