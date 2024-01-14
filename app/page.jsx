@@ -46,7 +46,7 @@ const Home = () => {
     <main>
       {/* HERO */}
       <section
-        className="flex h-[65vh] lg:min-h-screen flex-col items-center justify-between py-24 px-10 md:px-[20px] lg:px-10 text-sm relative"
+        className="flex min-h-screen flex-col items-center justify-between py-24 px-10 md:px-[20px] lg:px-10 text-sm relative"
         style={{ backgroundImage: "url(/assets/svg/grid.svg)" }}
       >
         <div className="flex items-center justify-between flex-col mt-24 4xl:mt-80">
