@@ -111,10 +111,10 @@ const Home = () => {
           <div className="hidden lg:block">
             <MyAnimation />
           </div>
-          <span className="uppercase tracking-wider px-10 text-lg 4xl:text-4xl">
+          <span className="uppercase tracking-wider px-[25px] md:px-10 text-lg 4xl:text-4xl">
             Who am i
           </span>
-          <div className="px-10">
+          <div className="px-[25px] md:px-10">
             <p className="text-base 4xl:text-3xl leading-normal">
               I am your catalyst for web and app development and innovative
               product design. I specialize in creating highly customizable web
@@ -140,7 +140,7 @@ const Home = () => {
       {/* SERVICES */}
       <section
         id="services"
-        className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-10 mt-24"
+        className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-[25px] md:px-10 mt-24"
       >
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
           Services
@@ -273,7 +273,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 p-10 border-b-[1px] border-slate-400/10">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 p-[25px] md:p-10 border-b-[1px] border-slate-400/10">
             <div className="w-full lg:w-1/2 relative">
               <img
                 src="/assets/images/dcossnew.JPG"
@@ -313,7 +313,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[25px] md:p-10">
             <div className="w-full lg:w-1/2 relative h-full">
               <img
                 src="/assets/images/textsumz.JPG"
@@ -368,7 +368,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
 
           <div
-            className="font-bold leading-relaxed flex flex-col items-center justify-center h-screen"
+            className="font-bold leading-relaxed flex flex-col items-center justify-center md:py-16 lg:py-0 md:h-max lg:h-screen"
             style={{
               backgroundImage: "url(/assets/images/gateway.jpg)",
               backgroundPosition: "center",
@@ -376,7 +376,7 @@ const Home = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="flex flex-col items-center justify-center w-full md:w-[60%] px-[25px] md:px-0 z-10">
+            <div className="flex flex-col items-center justify-center w-full md:w-[80%] lg:w-[60%] px-[25px] md:px-0 z-10">
               <FaQuoteLeft className="text-3xl text-white self-start" />
               <span className="text-center text-xl md:text-2xl px-6">
                 Empathy helps in many ways when building a great product and
@@ -392,7 +392,9 @@ const Home = () => {
               <FaQuoteRight className="text-3xl text-white self-end" />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row items-center justify-between w-full mt-20 z-10 px-[25px] md:px-10">
+          <div className="h-[10vh] w-full" id="contact"></div>
+
+          <div className="flex flex-col lg:flex-row items-start justify-between w-full mt-20 z-10 px-[25px] md:px-10">
             <div className="md:flex md:flex-col md:items-start md:justify-center w-full lg:w-1/2">
               <div className="space-y-5">
                 <div className="w-full">
@@ -442,8 +444,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
-              <div className="" id="contact">
+            <div className="w-full lg:w-1/2 mt-16 lg:mt-0">
+              <div>
                 <ContactForm />
               </div>
             </div>

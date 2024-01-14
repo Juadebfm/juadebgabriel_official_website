@@ -14,7 +14,7 @@ const Footer = () => {
         href="https://www.behance.net/arthurmoldovanu"
         className=" hover:text-slate-400/50 transition-colors duration-200 ease-linear"
       >
-        Designed by Arthur Menkhyn
+        Designed inspired by Arthur Menkhyn
       </a>
     </footer>
   );

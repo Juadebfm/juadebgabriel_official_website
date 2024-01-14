@@ -51,7 +51,7 @@ function ContactForm() {
       {!formSubmitted ? (
         <form
           onSubmit={handleFormSubmit}
-          className="flex flex-col items-center justify-center gap-5 mt-10"
+          className="flex flex-col items-center justify-center gap-5"
         >
           {missingFields.length > 0 && (
             <div className="text-red-500 capitalize">
