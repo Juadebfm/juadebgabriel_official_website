@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-
-import { MdOutlineDone } from "react-icons/md";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xdoqober");
@@ -33,16 +33,20 @@ function ContactForm() {
     await handleSubmit(e);
 
     setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
   };
 
   useEffect(() => {
     if (formSubmitted) {
-      setTimeout(() => {
+      const MySwal = withReactContent(Swal);
+
+      MySwal.fire({
+        icon: "success",
+        title: "Thanks",
+        text: "I will reach out to you soon.",
+        confirmButtonColor: "#22c55e",
+      }).then(() => {
         setFormSubmitted(false);
-      }, 50000);
+      });
     }
   }, [formSubmitted]);
 
@@ -70,6 +74,7 @@ function ContactForm() {
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
+
           <div className="w-full mb-3">
             <label htmlFor="phone">
               Can you share a{" "}
@@ -90,6 +95,7 @@ function ContactForm() {
               errors={state.errors}
             />
           </div>
+
           <div className="w-full mb-3">
             <label htmlFor="email">
               Great! I&apos;ll need an{" "}
@@ -110,6 +116,7 @@ function ContactForm() {
               errors={state.errors}
             />
           </div>
+
           <div className="w-full">
             <label htmlFor="message">
               Awesome. Now, you can share a bit of{" "}
@@ -130,6 +137,7 @@ function ContactForm() {
               errors={state.errors}
             />
           </div>
+
           <button
             type="submit"
             disabled={state.submitting}
@@ -142,7 +150,7 @@ function ContactForm() {
       {formSubmitted && (
         <div className="w-full flex items-center justify-center mt-10">
           <div className="flex items-center text-lg justify-center text-white h-40 w-40 p-5 border-2 border-green-500 rounded-full">
-            <MdOutlineDone className="text-3xl text-green-500" />
+            <div className="text-3xl text-green-500">Done</div>
           </div>
         </div>
       )}
