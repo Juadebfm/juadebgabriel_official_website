@@ -103,9 +103,10 @@ const Home = () => {
         </div>
       </section>
       {/* ABOUT */}
+      <div className="h-[10vh] w-full" id="about"></div>
+
       <section
         className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 relative"
-        id="about"
       >
         <div>
           <div className="hidden lg:block">
@@ -138,8 +139,9 @@ const Home = () => {
         </div>
       </section>
       {/* SERVICES */}
+      <div className="h-[10vh] w-full" id="services"></div>
+      
       <section
-        id="services"
         className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-[25px] md:px-10 mt-24"
       >
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
@@ -224,10 +226,9 @@ const Home = () => {
         </div>
       </section>
       {/* PROJECTS */}
-      <section
-        className="min-h-screen w-full flex flex-col items-start px-[25px] md:px-10 justify-center mt-24"
-        id="projects"
-      >
+      <div className="h-[10vh] w-full" id="projects"></div>
+
+      <section className="min-h-screen w-full flex flex-col items-start px-[25px] md:px-10 justify-center mt-24">
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
           Projects
         </span>
@@ -398,7 +399,9 @@ const Home = () => {
             <div className="md:flex md:flex-col md:items-start md:justify-center w-full lg:w-1/2">
               <div className="space-y-5">
                 <div className="w-full">
-                  <h2 className="text-5xl font-bold text-center md:text-start">Contact</h2>
+                  <h2 className="text-5xl font-bold text-center md:text-start">
+                    Contact
+                  </h2>
                 </div>
                 <div className="w-full flex flex-col items-start justify-start mb-5">
                   <Link
