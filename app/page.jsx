@@ -232,7 +232,7 @@ const Home = () => {
           Projects
         </span>
         <div className="bg-slate-400/10 mt-10 space-y-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[25px] md:p-10 border-b-[1px] border-slate-400/10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[15px] md:p-10 border-b-[1px] border-slate-400/10">
             <div className="w-full lg:w-1/2 relative">
               <img
                 src="/assets/images/project1.jpg"
@@ -273,7 +273,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 p-[25px] md:p-10 border-b-[1px] border-slate-400/10">
+          <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10 p-[15px] md:p-10 border-b-[1px] border-slate-400/10">
             <div className="w-full lg:w-1/2 relative">
               <img
                 src="/assets/images/dcossnew.JPG"
@@ -313,7 +313,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[25px] md:p-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10 p-[15px] md:p-10">
             <div className="w-full lg:w-1/2 relative h-full">
               <img
                 src="/assets/images/textsumz.JPG"
@@ -368,7 +368,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-black opacity-90 z-0"></div>
 
           <div
-            className="font-bold leading-relaxed flex flex-col items-center justify-center md:py-16 lg:py-0 md:h-max lg:h-screen"
+            className="font-bold leading-relaxed flex flex-col items-center justify-center py-16 lg:py-0 md:h-max lg:h-screen"
             style={{
               backgroundImage: "url(/assets/images/gateway.jpg)",
               backgroundPosition: "center",
@@ -398,7 +398,7 @@ const Home = () => {
             <div className="md:flex md:flex-col md:items-start md:justify-center w-full lg:w-1/2">
               <div className="space-y-5">
                 <div className="w-full">
-                  <h2 className="text-5xl font-bold">Contact</h2>
+                  <h2 className="text-5xl font-bold text-center md:text-start">Contact</h2>
                 </div>
                 <div className="w-full flex flex-col items-start justify-start mb-5">
                   <Link
@@ -410,13 +410,13 @@ const Home = () => {
                 </div>
               </div>
               <div className="w-full mt-7">
-                <div className="w-full lg:w-1/3 space-x-2 md:space-x-4 mt-2 flex items-start justify-start">
+                <div className="w-full lg:w-1/3 space-x-2 md:space-x-4 mt-2 flex items-start justify-center md:justify-start">
                   <Link
                     target="_blank"
                     href="https://github.com/Juadebfm"
                     className="flex text-center justify-center gap-2 border-[1px] border-slate-400/50 px-5 py-1 rounded-full text-white hover:text-slate-400/50 transition-colors duration-200 ease-linear"
                   >
-                    <span>Github</span>
+                    <span className="hidden md:block">Github</span>
                     <span>
                       <FaGithub className="text-xl 4xl:text-3xl pt-1" />
                     </span>
@@ -426,7 +426,7 @@ const Home = () => {
                     href="https://www.linkedin.com/in/juadebade/"
                     className="flex text-center justify-center gap-2 border-[1px] border-slate-400/50 px-5 py-1 rounded-full text-white hover:text-slate-400/50 transition-colors duration-200 ease-linear"
                   >
-                    <span>LinkedIn</span>
+                    <span className="hidden md:block">LinkedIn</span>
                     <span>
                       <FaLinkedinIn className="text-xl 4xl:text-3xl pt-1" />
                     </span>
@@ -436,7 +436,7 @@ const Home = () => {
                     href="https://twitter.com/Juadeb1"
                     className="flex text-center justify-center gap-2 border-[1px] border-slate-400/50 px-5 py-1 rounded-full text-white hover:text-slate-400/50 transition-colors duration-200 ease-linear"
                   >
-                    <span>Twitter</span>
+                    <span className="hidden md:block">Twitter</span>
                     <span>
                       <FaTwitter className="text-xl 4xl:text-3xl pt-1" />
                     </span>
