@@ -49,13 +49,22 @@ const Home = () => {
         className="flex min-h-screen flex-col items-center justify-between py-24 px-10 md:px-[20px] lg:px-10 text-sm relative"
         style={{ backgroundImage: "url(/assets/svg/grid.svg)" }}
       >
-        <div className="flex items-center justify-between flex-col mt-24 4xl:mt-80">
+        <div className="flex items-center justify-between flex-col mt-[10rem] 4xl:mt-80">
           <span className="uppercase tracking-wider text-base md:text-lg 4xl:text-4xl">
             Software Developer | UI/UX Designer
           </span>
           <h1 className="text-8xl md:text-9xl 4xl:text-[13rem] uppercase leading-none text_shadow">
             Juadeb <br /> Gabriel
           </h1>
+          <button className="px-5 py-3 border-[1px] border-white bg-transparent hover:bg-white hover:text-black transition-colors duration-200 ease-in-out w-[85%] md:w-[60%] mt-5">
+            <Link
+              href="https://drive.google.com/file/d/1hfFU3aFftM5cvYCHhO_UxzkTC7d-moHX/view?usp=sharing"
+              target="_blank"
+              download={true}
+            >
+              Resume
+            </Link>
+          </button>
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between gap-7 md:gap-0 w-max md:w-full absolute bottom-6 4xl:bottom-24 px-10">
           <div className="w-full md:w-1/3">
@@ -105,9 +114,7 @@ const Home = () => {
       {/* ABOUT */}
       <div className="h-[10vh] w-full" id="about"></div>
 
-      <section
-        className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 relative"
-      >
+      <section className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 relative">
         <div>
           <div className="hidden lg:block">
             <MyAnimation />
@@ -140,10 +147,8 @@ const Home = () => {
       </section>
       {/* SERVICES */}
       <div className="h-[10vh] w-full" id="services"></div>
-      
-      <section
-        className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-[25px] md:px-10 mt-24"
-      >
+
+      <section className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-[25px] md:px-10 mt-24">
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
           Services
         </span>

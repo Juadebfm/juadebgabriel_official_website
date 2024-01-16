@@ -15,6 +15,7 @@ function ContactForm() {
 
     // Check if any of the required fields are missing
     const fields = {
+      name: e.target.name.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
@@ -76,13 +77,7 @@ function ContactForm() {
           </div>
 
           <div className="w-full mb-3">
-            <label htmlFor="phone">
-              Can you share a{" "}
-              <b>
-                <i className="capitalize">phone number</i>
-              </b>{" "}
-              to call you on?
-            </label>
+            <label htmlFor="phone">Phone Number</label>
             <input
               id="phone"
               type="tel"
@@ -97,13 +92,7 @@ function ContactForm() {
           </div>
 
           <div className="w-full mb-3">
-            <label htmlFor="email">
-              Great! I&apos;ll need an{" "}
-              <b>
-                <i className="capitalize">email</i>
-              </b>{" "}
-              to reach you on too?
-            </label>
+            <label htmlFor="email">Email (Company or Personal)</label>
             <input
               id="email"
               type="email"
@@ -119,11 +108,7 @@ function ContactForm() {
 
           <div className="w-full">
             <label htmlFor="message">
-              Awesome. Now, you can share a bit of{" "}
-              <b>
-                <i className="capitalize">context</i>
-              </b>{" "}
-              on what you want to achieve?
+              Message (Kindly share your pain-points)
             </label>
             <textarea
               id="message"
@@ -143,7 +128,7 @@ function ContactForm() {
             disabled={state.submitting}
             className="px-5 py-3 border-[1px] bg-transparent border-slate-400/40 hover:bg-slate-400/10 transition-colors duration-200 ease-in-out w-full lg:w-[40%] mt-5"
           >
-            Submit
+            {state.submitting ? "Submitting..." : "Submit"}
           </button>
         </form>
       ) : null}

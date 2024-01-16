@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { CgMenuHotdog } from "react-icons/cg";
 import { TbCodeDots } from "react-icons/tb";
 import { GiClockwork } from "react-icons/gi";
@@ -73,19 +73,36 @@ const Navbar = () => {
       >
         {/* Your information content goes here */}
         <div className="w-full space-y-4 p-[25px] md:p-10 text-white">
-          <div className="flex items-center justify-between w-full pt-10">
-            <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
-              How i work
-            </span>
-            <div className="lg:hidden text-white text-right">
+          <div className="flex items-center justify-between w-full pt-10 lg:pt-0">
+            <div className="flex items-center justify-between space-x-2 cursor-pointer">
+              <GiClockwork className="text-4xl" />
+            </div>
+            <div className="text-white text-right">
               <button onClick={closeMenu}>
                 <GrClose className="text-3xl" />
               </button>
             </div>
           </div>
-          <div className="pt-10">
-            <div className="w-full cursor-pointer">
-              <h2 className="uppercase text-xl 4xl:text-4xl font-bold mb-3 flex items-end justify-start gap-3">
+          <div>
+            <ul className="flex items-center justify-between space-x-5 w-full 4xl:text-3xl py-10 lg:hidden">
+              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+                <Link href="#about">About</Link>
+              </li>
+              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+                <Link href="#services">Services</Link>
+              </li>
+              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+                <Link href="#projects">Projects</Link>
+              </li>
+              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+                <Link href="#contact">Contacts</Link>
+              </li>
+            </ul>
+            <div className="w-full cursor-pointer lg:mt-10">
+              <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
+                How i work
+              </span>
+              <h2 className="pt-10 uppercase text-xl 4xl:text-4xl font-bold mb-3 flex items-end justify-start gap-3">
                 <span>1. Submit Project Brief</span>
               </h2>
               <p className="pb-5 border-b border-slate-400 4xl:text-3xl">
