@@ -112,7 +112,7 @@ const Home = () => {
         </div>
       </section>
       {/* ABOUT */}
-      <div className="h-[10vh] w-full" id="about"></div>
+      <div className="h-[5vh] md:h-[10vh] w-full" id="about"></div>
 
       <section className="h-max mt-24 lg:mt-0 lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 relative">
         <div>
@@ -146,7 +146,7 @@ const Home = () => {
         </div>
       </section>
       {/* SERVICES */}
-      <div className="h-[10vh] w-full" id="services"></div>
+      <div className="h-[5vh] md:h-[10vh] w-full" id="services"></div>
 
       <section className="h-max lg:min-h-screen w-full flex flex-col items-start justify-center space-y-14 px-[25px] md:px-10 mt-24">
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
@@ -231,7 +231,7 @@ const Home = () => {
         </div>
       </section>
       {/* PROJECTS */}
-      <div className="h-[10vh] w-full" id="projects"></div>
+      <div className="h-[5vh] md:h-[10vh] w-full" id="projects"></div>
 
       <section className="min-h-screen w-full flex flex-col items-start px-[25px] md:px-10 justify-center mt-24">
         <span className="uppercase tracking-wider text-lg 4xl:text-4xl">
