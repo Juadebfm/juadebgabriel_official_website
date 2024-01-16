@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaLinkedinIn, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -9,7 +8,6 @@ import { FaGithub } from "react-icons/fa";
 import { HiOutlineCube } from "react-icons/hi2";
 import { GoFileCode } from "react-icons/go";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { GiClockwork } from "react-icons/gi";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -66,8 +64,8 @@ const Home = () => {
             </Link>
           </button>
         </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between gap-7 md:gap-0 w-max md:w-full absolute bottom-6 4xl:bottom-24 px-10">
-          <div className="w-full md:w-1/3">
+        <div className="flex flex-col lg:flex-row items-start md:items-center justify-center lg:justify-between gap-7 lg:gap-0 w-max md:w-full absolute bottom-6 4xl:bottom-24 px-10">
+          <div className="w-full lg:w-1/3">
             <Link
               data-aos="fade-right"
               data-aos-offset="300"
@@ -79,7 +77,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <ul className="flex items-center justify-center space-x-5 w-full md:w-1/3 4xl:text-3xl">
+          <ul className="flex items-center justify-center space-x-5 w-full lg:w-1/3 4xl:text-3xl">
             <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
               <Link href="#about">About</Link>
             </li>
@@ -97,7 +95,7 @@ const Home = () => {
           <div
             data-aos="fade-left"
             data-aos-offset="100"
-            className="flex items-center justify-center md:justify-end w-full md:w-1/3 space-x-4"
+            className="flex items-center justify-center md:justify-end w-full lg:w-1/3 space-x-4"
           >
             <Link target="_blank" href="https://github.com/Juadebfm">
               <FaGithub className="text-white hover:text-slate-400/50 transition-colors duration-200 ease-linear text-xl 4xl:text-3xl" />
