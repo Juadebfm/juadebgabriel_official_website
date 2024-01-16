@@ -85,16 +85,28 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="flex items-center justify-between space-x-5 w-full 4xl:text-3xl py-10 lg:hidden">
-              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+              <li
+                onClick={closeMenu}
+                className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear"
+              >
                 <Link href="#about">About</Link>
               </li>
-              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+              <li
+                onClick={closeMenu}
+                className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear"
+              >
                 <Link href="#services">Services</Link>
               </li>
-              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+              <li
+                onClick={closeMenu}
+                className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear"
+              >
                 <Link href="#projects">Projects</Link>
               </li>
-              <li className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear">
+              <li
+                onClick={closeMenu}
+                className="hover:text-slate-400/50 hover:underline underline-offset-1 transition-colors duration-200 ease-linear"
+              >
                 <Link href="#contact">Contacts</Link>
               </li>
             </ul>
